@@ -10,5 +10,4 @@ bundle install
   ./bin/render-build.sh
   ./bin/rails db:migrate
    rails webpacker:install
-   bundle exec rails webpacker:install 
    npm install
