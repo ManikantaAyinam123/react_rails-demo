@@ -9,6 +9,7 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.4"
 gem "sprockets-rails"
 gem "webpacker"
 gem 'react-rails'
+ gem 'foreman'
 
 # Use pg as the database for Active Record
 gem "pg", "~> 1.1"

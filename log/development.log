@@ -2123,3 +2123,24 @@ Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 265
   [1m[36mActiveRecord::InternalMetadata Create (3.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-07-25 07:06:02.018554', '2024-07-25 07:06:02.018558') RETURNING "key"[0m
   [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3236387317031094870)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/aboutus" for ::1 at 2024-07-25 14:47:26 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Parameters: {"path"=>"aboutus"}
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 714)
+  Rendered layout layouts/application.html.erb (Duration: 147.6ms | Allocations: 67465)
+Completed 200 OK in 192ms (Views: 156.7ms | ActiveRecord: 0.0ms | Allocations: 77234)
+
+
+Started GET "/" for ::1 at 2024-07-25 14:55:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 715)
+  Rendered layout layouts/application.html.erb (Duration: 63.6ms | Allocations: 45416)
+Completed 200 OK in 71ms (Views: 66.1ms | ActiveRecord: 0.0ms | Allocations: 52301)
+
+
