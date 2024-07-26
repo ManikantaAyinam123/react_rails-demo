@@ -7,16 +7,13 @@ import AboutUs from "./AboutUs";
 export default function App() {
   return (
 
-    // <BrowserRouter>
-    //   <Routes>
-    //     <Route path="/" element={<Home/>}/>
-    //       <Route path="aboutus" element={<AboutUs/>} />
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>}/>
+          <Route path="aboutus" element={<AboutUs/>} />
         
-    //   </Routes>
-    // </BrowserRouter>
-    <div>
-      this is app.js file
-    </div>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
