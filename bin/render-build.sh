@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -o errexit
 
+gem install bundler
+
 # Install Ruby dependencies
 bundle install
 
