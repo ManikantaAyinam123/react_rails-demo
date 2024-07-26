@@ -10,7 +10,7 @@ services:
     runtime: ruby
     plan: free
     buildCommand: "./bin/render-build.sh"
-    startCommand: "foreman start"
+    startCommand: "bin/webpack-dev-server"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
