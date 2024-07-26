@@ -1,12 +1,20 @@
-
+#!/usr/bin/env bash
 set -o errexit
 
-# bundle install
-# bundle exec rails assets:precompile
-# bundle exec rails assets:clean
+# Install Ruby dependencies
 bundle install
- bundle exec rails assets:precompile
-  bundle exec rails assets:clean
-  rails db:migrate
-   rails webpacker:install
-   npm install
+
+# Install Webpacker
+bundle exec rails webpacker:install
+
+# Install Node dependencies
+npm install
+
+# Precompile assets
+bundle exec rails assets:precompile
+
+# Clean assets (optional, depends on your use case)
+bundle exec rails assets:clean
+
+# Migrate the database
+bundle exec rails db:migrate
