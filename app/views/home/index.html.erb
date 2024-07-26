@@ -1,1 +1,15 @@
-<%= javascript_pack_tag 'index' %>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Your Rails App</title>
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  
+  <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <!-- Ensure you have a div with id 'root' where React will render -->
+  <div id="root"></div>
+</body>
+</html>
