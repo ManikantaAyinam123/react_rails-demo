@@ -6,11 +6,14 @@ databases:
 
 services:
   - type: web
-    name: mysite
-    runtime: ruby
-    plan: free
-    buildCommand: "./bin/render-build.sh"
-    startCommand: "foreman start"
+    name: myapp
+    env: ruby
+    buildCommand: |
+      set -o errexit
+      npm install 
+      bundle install
+      bundle exec rails assets:precompile
+    startCommand: foreman start -f Procfile.render
     envVars:
       - key: DATABASE_URL
         fromDatabase:
@@ -19,6 +22,4 @@ services:
       - key: RAILS_MASTER_KEY
         sync: false
       - key: WEB_CONCURRENCY
-        value: "2"
-      - key: RAILS_ENV
-        value: "production"
+        value: 2
