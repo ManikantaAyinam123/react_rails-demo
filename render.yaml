@@ -12,6 +12,7 @@ services:
       set -o errexit
       npm install 
       bundle install
+      bundle exec rails webpacker:install
       bundle exec rails assets:precompile
     startCommand: foreman start -f Procfile.render
     envVars:
