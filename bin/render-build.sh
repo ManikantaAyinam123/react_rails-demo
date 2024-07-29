@@ -10,7 +10,6 @@ bundle install
 bundle exec rails webpacker:install
 bundle exec rails webpacker:install:react
 
-RAILS_ENV=production bundle exec rails webpacker:compile
 
 
 # Install Node dependencies

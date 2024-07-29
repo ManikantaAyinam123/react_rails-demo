@@ -75,5 +75,5 @@ production:
   webpack_compile_output: false
   # Include additional configurations for production if needed
   # Example: 
-  public_path: '/packs'
+  # public_path: '/packs'
   # chunk_filename: '[name]-[chunkhash].js'
