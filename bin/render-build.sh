@@ -9,6 +9,9 @@ bundle install
 # Install Webpacker
 bundle exec rails webpacker:install
 bundle exec rails webpacker:install:react
+bundle exec rails assets:clobber
+bundle exec rails webpacker:clobber
+RAILS_ENV=production bundle exec rails webpacker:compile
 
 
 # Install Node dependencies
