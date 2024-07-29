@@ -1,11 +1,27 @@
 #!/usr/bin/env bash
 set -o errexit
 
-npm install
-npm run build
+gem install bundler
 
-gem install foreman
+# Install Ruby dependencies
 bundle install
+
+# Install Webpacker
 bundle exec rails webpacker:install
-bundle exec rails assets:precompile
+bundle exec rails webpacker:install:react
+
+
+# Install Node dependencies
+npm install
+
+# Ensure cross-env is installed
+npm install --save-dev cross-env
+
+# Precompile assets with the OpenSSL legacy provider
+cross-env NODE_OPTIONS=--openssl-legacy-provider npm run build
+
+# Clean assets (optional, depends on your use case)
 bundle exec rails assets:clean
+
+# Migrate the database
+bundle exec rails db:migrate
