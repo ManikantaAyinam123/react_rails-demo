@@ -25,3 +25,4 @@ bundle exec rails assets:clean
 
 # Migrate the database
 bundle exec rails db:migrate
+

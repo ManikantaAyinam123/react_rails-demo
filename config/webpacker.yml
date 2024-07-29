@@ -73,7 +73,5 @@ production:
   extract_css: true
   cache_manifest: true
   webpack_compile_output: false
-  # Include additional configurations for production if needed
-  # Example: 
-  # public_path: '/packs'
-  # chunk_filename: '[name]-[chunkhash].js'
+  public_path: '/packs'
+  chunk_filename: '[name]-[chunkhash].js'
